@@ -13,7 +13,9 @@ public abstract class Expression {
      */
     public abstract String toString();
 
-    public static final int NONE = 0;
-    public static final int ADDITION = 1;
-    public static final int MULTIPLICATION = 2;
+    static final int NONE = 0;
+    static final int ADDITION = 1;
+    static final int SUBTRACTION = 2;
+    static final int MULTIPLICATION = 3;
+    static final int DIVISION = 4;
 }

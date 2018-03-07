@@ -17,7 +17,7 @@ public class Parser {
      * NOTE: This method should return a clone of rootNode in order to prevent
      * clients from messing with the private field.
      */
-    public Expression getRootNode() {
+    Expression getRootNode() {
         return rootNode;
     }
 
@@ -32,8 +32,8 @@ public class Parser {
     /**
      * Parse an expression
      */
-    public void parseExpression() {
-        Expression left = null;
+    void parseExpression() {
+        Expression left;
         Expression right = null;
         int op;
 
@@ -45,8 +45,14 @@ public class Parser {
             case '+':
                 op = Expression.ADDITION;
                 break;
+            case '-':
+                op = Expression.SUBTRACTION;
+                break;
             case '*':
                 op = Expression.MULTIPLICATION;
+                break;
+            case '/':
+                op = Expression.DIVISION;
                 break;
             default:
                 // There's no right hand side.
@@ -65,8 +71,14 @@ public class Parser {
             case Expression.ADDITION:
                 rootNode = new Addition(left, right);
                 break;
+            case Expression.SUBTRACTION:
+                rootNode = new Subtraction(left, right);
+                break;
             case Expression.MULTIPLICATION:
                 rootNode = new Multiplication(left, right);
+                break;
+            case Expression.DIVISION:
+                rootNode = new Division(left, right);
                 break;
             default:
                 // do nothing: the expression we want is there already
@@ -103,7 +115,7 @@ public class Parser {
     private void parseConstant() {
         // require Character.isDigit(lexer.lastToken())
 
-        int value = 0;
+        int value;
 
         //System.out.println("parseConstant()");
         value = Character.getNumericValue(lexer.lastToken());
