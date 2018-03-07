@@ -2,14 +2,14 @@
  * Constant expressions
  */
 public class Constant extends Expression {
-   
+
     /**
      * Initialise value
      */
     public Constant(int v) {
-	value = v;
+        value = v;
     }
-   
+
     /**
      * The value
      */
@@ -19,13 +19,13 @@ public class Constant extends Expression {
      * The value
      */
     public int getValue() {
-	return 0; // Fix this in Exercise 1.
+        return Integer.parseInt(String.valueOf(value));
     }
-   
+
     /**
      * String representation in in-order notation
      */
     public String toString() {
-	return String.valueOf(value);
+        return String.valueOf(value);
     }
 }

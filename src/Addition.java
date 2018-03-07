@@ -20,7 +20,8 @@ public class Addition extends Expression {
      * The value
      */
     public int getValue() {
-        return 0; // Fix this in Exercise 1.
+        return Integer.parseInt(String.valueOf(left.getValue())) +
+                Integer.parseInt(String.valueOf(right.getValue()));
     }
 
     /**

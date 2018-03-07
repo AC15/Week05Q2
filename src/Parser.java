@@ -13,7 +13,7 @@ public class Parser {
 
     /**
      * The result of the last parse command
-     *
+     * <p>
      * NOTE: This method should return a clone of rootNode in order to prevent
      * clients from messing with the private field.
      */

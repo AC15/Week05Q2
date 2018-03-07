@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.io.*;
 
 /**
  * A calculator that parses simple arithmetic expressions into a binary tree
@@ -16,6 +15,7 @@ public class Calculator {
     }
 
     /* Constructor */
+
     /**
      * Run the calculator.
      */
@@ -28,7 +28,7 @@ public class Calculator {
         System.out.print(prompt);
 
         String line = input.nextLine().toLowerCase().trim();
-        
+
         while (!line.equals("q")) {
 
             if (line.length() > 0) {
@@ -57,6 +57,7 @@ public class Calculator {
     }
 
     /* Methods */
+
     /**
      * Give instructions on how to use this thing.
      */

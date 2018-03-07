@@ -1,7 +1,7 @@
 
 /**
  * Lexical scanners for simple integer expressions
- *
+ * <p>
  * Tokens in this case are just non-white-space characters, so it's much simpler
  * than the HTML scanner.
  */
